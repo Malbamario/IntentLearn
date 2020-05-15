@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IntentLearn</string>
+    <string name="just_move">hanya pindah activity</string>
+    <string name="move_with_data">pindah activity dengan data</string>
+    <string name="dial_a_number">telpon nomor</string>
+    <string name="just_move_result">Ini Cuman Pindah Activity Aja Gaaaees …</string>
+    <string name="username_title">Username</string>
+    <string name="postal_code_title">Kode Pos</string>
+    <string name="username_hint">Masukan Username</string>
+    <string name="postal_code_hint">Masukan Kode Pos</string>
+    <string name="move_with_data_congrats">Selamat Anda Telah Berpindah Activity dengan Data</string>
+    <string name="dial_number_hint">Masukan Nomor</string>
+</resources>

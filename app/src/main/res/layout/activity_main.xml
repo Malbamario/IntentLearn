@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_just_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:text="@string/just_move"/>
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/btn_just_move"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_postal_code"
+        android:text="@string/username_title"/>
+    <TextView
+        android:id="@+id/tv_postal_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/btn_just_move"
+        app:layout_constraintStart_toEndOf="@id/tv_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/postal_code_title"/>
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        app:layout_constraintStart_toStartOf="@id/tv_username"
+        app:layout_constraintEnd_toEndOf="@id/tv_username"
+        android:hint="@string/username_hint"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/edt_postal_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_postal_code"
+        app:layout_constraintStart_toStartOf="@id/tv_postal_code"
+        app:layout_constraintEnd_toEndOf="@id/tv_postal_code"
+        android:hint="@string/postal_code_hint"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+    <Button
+        android:id="@+id/btn_move_with_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_username"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/move_with_data"/>
+    <EditText
+        android:id="@+id/edt_dial_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_move_with_data"
+        android:hint="@string/dial_number_hint"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+    <Button
+        android:id="@+id/btn_dial_a_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_dial_number"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:text="@string/dial_a_number"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
