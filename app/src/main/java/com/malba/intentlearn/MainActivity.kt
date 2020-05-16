@@ -43,10 +43,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(moveIntent)
             }
             R.id.btn_move_with_data ->{
-                val moveIntent = Intent(this@MainActivity, MoveWithDataActivity::class.java)
-                moveIntent.putExtra(MoveWithDataActivity.EXTRA_USERNAME, edtUsername.text.toString())
-                moveIntent.putExtra(MoveWithDataActivity.EXTRA_POSTAL_CODE, edtPostalCode.text.toString())
-                startActivity(moveIntent)
+                var isEmpty = false
+
+                if(edtUsername.text.toString() == ""){
+                    isEmpty = true
+                    edtUsername.error = "Masukan Username sebelum pindah"
+                }
+                if(edtPostalCode.text.toString() == ""){
+                    isEmpty = true
+                    edtPostalCode.error = "Masukan Kode pos sebelum pindah"
+                }
+                if (!isEmpty){
+                    val moveIntent = Intent(this@MainActivity, MoveWithDataActivity::class.java)
+                    moveIntent.putExtra(MoveWithDataActivity.EXTRA_USERNAME, edtUsername.text.toString())
+                    moveIntent.putExtra(MoveWithDataActivity.EXTRA_POSTAL_CODE, edtPostalCode.text.toString())
+                    startActivity(moveIntent)
+                }
             }
             R.id.btn_dial_a_number ->{
                 val moveIntent = Intent(Intent.ACTION_CALL, Uri.parse("tel:${edtDialNumber.text}"))
